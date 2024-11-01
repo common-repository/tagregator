@@ -1,0 +1,60 @@
+{
+  "name": "tagregator",
+  "version": "0.6.0",
+  "description": "Aggregates hashtagged content from multiple social media sites into a single stream.",
+  "license": "GPL-2.0+",
+  "repository": {
+    "type": "svn",
+    "url": "https://plugins.svn.wordpress.org/tagregator/trunk/"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "classnames": "2.2.6",
+    "flux": "3.1.3",
+    "moment-timezone": "0.5.27"
+  },
+  "engines": {
+    "node": ">=12.16.0",
+    "npm": ">=6.13.4"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "dev": "webpack --watch",
+    "lint": "eslint javascript --ext=js,jsx"
+  },
+  "devDependencies": {
+    "@babel/core": "7.8.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.8.3",
+    "@babel/plugin-transform-react-jsx": "7.8.3",
+    "@babel/plugin-transform-runtime": "7.8.3",
+    "@babel/preset-env": "7.8.4",
+    "@wordpress/babel-plugin-import-jsx-pragma": "2.5.0",
+    "@wordpress/browserslist-config": "2.6.0",
+    "@wordpress/dependency-extraction-webpack-plugin": "2.2.0",
+    "@wordpress/eslint-plugin": "4.0.0",
+    "autoprefixer": "9.7.4",
+    "babel-loader": "8.0.6",
+    "css-loader": "3.4.2",
+    "eslint": "6.8.0",
+    "eslint-plugin-react": "7.18.3",
+    "mini-css-extract-plugin": "0.9.0",
+    "node-sass": "4.13.1",
+    "postcss-loader": "3.0.0",
+    "sass-loader": "8.0.2",
+    "style-loader": "1.1.3",
+    "webpack": "4.41.6",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.10.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:@wordpress/eslint-plugin/recommended-with-formatting"
+    ],
+    "globals": {
+      "tggrData": "readonly"
+    },
+    "rules": {
+      "@wordpress/dependency-group": "warn"
+    }
+  }
+}
